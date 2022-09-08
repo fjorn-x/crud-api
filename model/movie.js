@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const userSchema = new mongoose.Schema({
+const movieSchema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
@@ -8,6 +8,7 @@ const userSchema = new mongoose.Schema({
   img: {
     type: String,
     data: Buffer,
+    required: true,
   },
   summary: {
     type: String,
@@ -15,4 +16,4 @@ const userSchema = new mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model("User", userSchema);
+module.exports = mongoose.model("Movie", movieSchema);
